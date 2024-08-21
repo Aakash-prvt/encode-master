@@ -35,12 +35,10 @@ sudo_users = list(set(int(x)
                   for x in os.environ.get("SUDO_USERS", "5725206423").split()))
 
 # Optional
-download_dir = os.environ.get("DOWNLOAD_DIR")
-encode_dir = os.environ.get("ENCODE_DIR")
-upload_doc = os.environ.get("UPLOAD_AS_DOC")
-upload_doc = upload_doc and upload_doc != '0'
-doc_thumb = os.environ.get("DOC_THUMB")
-doc_thumb = doc_thumb and doc_thumb != '0'
+download_dir = os.environ.get("DOWNLOAD_DIR", "/bot/downloads")  # Set default path if not provided
+encode_dir = os.environ.get("ENCODE_DIR", "/bot/encoded")  # Set default path if not provided
+upload_doc = os.environ.get("UPLOAD_AS_DOC", "1")
+doc_thumb = os.environ.get("DOC_THUMB", "0") != '0'
 
 # Encode Settings
 resolution = int(os.environ.get("RESOLUTION", "480"))
