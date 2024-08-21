@@ -43,11 +43,11 @@ doc_thumb = os.environ.get("DOC_THUMB")
 doc_thumb = doc_thumb and doc_thumb != '0'
 
 # Encode Settings
-resolution = os.environ.get("RESOLUTION")
-preset = os.environ.get("PRESET")
-tune = os.environ.get("TUNE")
-audio = os.environ.get("AUDIO")
-crf = os.environ.get("CRF")
+resolution = os.environ.get("RESOLUTION", "854x480")
+preset = os.environ.get("PRESET", "veryfast")
+tune = os.environ.get("TUNE", None)
+audio_codec = os.environ.get("AUDIO_CODEC", "libopus")
+crf = os.environ.get("CRF", "30")
 
 SOURCE_MESSAGE = '''
 # VideoEncoder - a telegram bot for compressing/encoding videos in h264 format.
