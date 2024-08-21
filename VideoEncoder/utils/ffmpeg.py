@@ -106,7 +106,7 @@ async def encode(filepath):
     else:
         resolution = ''
 
-    finish = '-b:a 32k -c:s copy -map 0 -ac 2 -ab 32k -vbr 2 -level 3.1 -threads 12 -metadata title='𝙰𝚗𝚒𝚖𝚎_𝚆𝚊𝚛𝚒𝚘𝚛' -metadata author='𝙰𝚗𝚒𝚖𝚎_𝚆𝚊𝚛𝚒𝚘𝚛' -metadata:s:s title='𝙰𝚗𝚒𝚖𝚎_𝚆𝚊𝚛𝚒𝚘𝚛' -metadata:s:a title='𝙰𝚗𝚒𝚖𝚎_𝚆𝚊𝚛𝚒𝚘𝚛' -metadata:s:v title='𝙰𝚗𝚒𝚖𝚎_𝚆𝚊𝚛𝚒𝚘𝚛''
+    finish = '-threads 12'
 
     # Finally
     command = ['ffmpeg', '-y', '-i', filepath]
