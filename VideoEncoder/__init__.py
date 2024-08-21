@@ -44,7 +44,7 @@ doc_thumb = os.environ.get("DOC_THUMB", "0") != '0'
 resolution = int(os.environ.get("RESOLUTION", "480"))
 preset = os.environ.get("PRESET", "vf")
 tune = os.environ.get("TUNE", None)
-audio_codec = os.environ.get("AUDIO_CODEC", "opus")
+audio = os.environ.get("AUDIO", "opus")
 crf = os.environ.get("CRF", "30")
 
 SOURCE_MESSAGE = '''
