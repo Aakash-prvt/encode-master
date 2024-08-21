@@ -43,10 +43,10 @@ doc_thumb = os.environ.get("DOC_THUMB")
 doc_thumb = doc_thumb and doc_thumb != '0'
 
 # Encode Settings
-resolution = os.environ.get("RESOLUTION", "854x480")
-preset = os.environ.get("PRESET", "veryfast")
+resolution = int(os.environ.get("RESOLUTION", "480"))
+preset = os.environ.get("PRESET", "vf")
 tune = os.environ.get("TUNE", None)
-audio_codec = os.environ.get("AUDIO_CODEC", "libopus")
+audio_codec = os.environ.get("AUDIO_CODEC", "opus")
 crf = os.environ.get("CRF", "30")
 
 SOURCE_MESSAGE = '''
